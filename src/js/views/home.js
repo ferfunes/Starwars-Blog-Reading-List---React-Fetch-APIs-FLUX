@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/home.scss";
-import { Planets } from "../component/Planets.js";
-import { Characters } from "../component/Characters.js";
+
+import { Card } from "../component/Card.js";
 
 export class Home extends React.Component {
 	constructor() {
@@ -36,24 +36,34 @@ export class Home extends React.Component {
 	render() {
 		let newArray = this.state.character.map((item, index) => {
 			return (
-				<Characters
+				<Card
 					key={index}
-					name={item.name}
-					height={item.height}
-					birth_year={item.birth_year}
-					gender={item.gender}
+					imgUrl="https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_5a38c454_461eebf5.jpeg?region=0%2C0%2C1536%2C864&width=768"
+					prop1={item.name}
+					prop1Title="Name : "
+					prop2={item.height}
+					prop2Title="Height : "
+					prop3={item.birth_year}
+					prop3Title="Birth Year : "
+					prop4={item.gender}
+					prop4Title="Gender : "
 				/>
 			);
 		});
 
 		let newArray2 = this.state.planet.map((item, index) => {
 			return (
-				<Planets
+				<Card
 					key={index}
-					name={item.name}
-					terrain={item.terrain}
-					population={item.population}
-					climate={item.climate}
+					imgUrl="https://lumiere-a.akamaihd.net/v1/images/databank_alderaan_01_169_4a5264e2.jpeg?region=0%2C0%2C1560%2C878&width=768"
+					prop1={item.name}
+					prop1Title="Name : "
+					prop2={item.terrain}
+					prop2Title="Terrain : "
+					prop3={item.population}
+					prop3Title="Population : "
+					prop4={item.climate}
+					prop4Title="Climate : "
 				/>
 			);
 		});
