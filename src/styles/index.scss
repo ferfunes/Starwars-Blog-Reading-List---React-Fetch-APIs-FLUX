@@ -1,3 +1,77 @@
-/* 
-    General Styles
-*/
+body{
+    background: black;
+}
+.hr-top, .hr-bottom{
+    border-top: .05rem solid #1ebba3;
+    width: 1050px;
+}
+
+.pText{
+    color:lightgray;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+
+}
+
+
+
+/****************************** NavBar Component *********************/
+.navbar{
+ background: black;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+}
+
+
+.social-cont{
+    color: white;
+    font-size: 20px;
+
+}
+.facebook, .instagram, .twitter{
+    margin-left:10px;
+}
+.facebook:hover, .instagram:hover, .twitter:hover, .btn-text:hover{
+color:#1ebba3;
+}
+
+.input, .search-btn{
+    height: 30px;
+}
+.btn-text{
+    font-size: 10px;
+}
+
+/****************************** Card Component *********************/
+.card-planets, .card-characters{
+    background: black;
+}
+.title{
+    color:white;
+}
+/****************************** Footer Component *********************/
+.page-footer{
+
+    height: 100px;
+    margin-top:300px;
+}
+.footer-cr {
+    color:white;
+
+}
+
+/****************************** Details View *********************/
+.pic-holder{
+    width: 400px;
+    height: 400px;
+    background: red;
+}
+.description-holder{
+    width: 400px;
+    height: 400px;
+    background: blue;
+}
