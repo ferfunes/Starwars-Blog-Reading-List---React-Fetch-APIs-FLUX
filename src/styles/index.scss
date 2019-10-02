@@ -75,13 +75,29 @@ color:#1ebba3;
 }
 
 /****************************** Details View *********************/
-.pic-holder{
-    width: 400px;
-    height: 400px;
-    background: red;
+
+
+.cont2{
+    margin-top: 40px;
 }
-.description-holder{
-    width: 400px;
-    height: 400px;
-    background: blue;
+
+.name{
+     font-size: 40px;
+    color: white;
+}
+
+.description{
+ color: white;
+}
+
+.txt1, .txt2, .txt3{
+    border-right: 3px solid lightgray;
+}
+
+.txt1, .txt2, .txt3, .txt4{
+ color: white;
+}
+
+.title-attribute{
+ color: purple;
 }

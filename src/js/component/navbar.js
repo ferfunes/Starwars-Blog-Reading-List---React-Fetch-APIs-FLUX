@@ -7,10 +7,12 @@ export class Navbar extends React.Component {
 			<div className="whole">
 				<nav className="navbar navbar-expand-lg">
 					<a className="navbar-brand" href="#">
-						<img
-							className="logo"
-							src="https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo_black-700x700.png"
-						/>
+						<Link to="/">
+							<img
+								className="logo"
+								src="https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo_black-700x700.png"
+							/>
+						</Link>
 					</a>
 
 					<div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -47,9 +49,11 @@ export class Navbar extends React.Component {
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
-							Detail
-						</a>
+						<Link to="/Details">
+							<a className="nav-link" href="#">
+								Detail
+							</a>
+						</Link>
 					</li>
 					<li className="nav-item">
 						<a className="nav-link" href="#">
