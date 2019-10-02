@@ -60,7 +60,7 @@ export class Home extends React.Component {
 
 		return (
 			<div className="home ">
-				<div>
+				<div className="planets-div">
 					<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
 					<p className="pText">Planets</p>
 					<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
