@@ -63,6 +63,7 @@ color:#1ebba3;
 }
 
 
+
 /****************************** Footer Component *********************/
 .page-footer{
 
@@ -88,6 +89,12 @@ color:#1ebba3;
 
 .description{
  color: white;
+ width: 250px;
+
+    font-weight: 200;
+    vertical-align: sub;
+    white-space: pre-wrap;
+
 }
 
 .txt1, .txt2, .txt3{
@@ -101,3 +108,4 @@ color:#1ebba3;
 .title-attribute{
  color: purple;
 }
+

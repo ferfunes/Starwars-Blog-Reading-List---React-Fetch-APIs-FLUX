@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/home.scss";
-
 import { Card } from "../component/Card.js";
+import { render } from "react-dom";
 
 export class Home extends React.Component {
 	constructor() {
@@ -33,8 +33,16 @@ export class Home extends React.Component {
 			});
 	}
 
+	parserFunction(url) {
+		let temp = "";
+		for (var i = url.length - 2; i >= 0; i--) {
+			if (url[i] !== "/") temp = url[i] + temp;
+			else return parseInt(temp);
+		}
+	}
+
 	render() {
-		let newArray = this.state.character.map((item, index) => {
+		let peopleCard = this.state.character.map((item, index) => {
 			return (
 				<Card
 					key={index}
@@ -47,11 +55,15 @@ export class Home extends React.Component {
 					prop3Title="Birth Year : "
 					prop4={item.gender}
 					prop4Title="Gender : "
+					prop5={item.eye_color}
+					prop5Title="Eye Color : "
+					type="people"
+					id={this.parserFunction(item.url)}
 				/>
 			);
 		});
 
-		let newArray2 = this.state.planet.map((item, index) => {
+		let planetCard = this.state.planet.map((item, index) => {
 			return (
 				<Card
 					key={index}
@@ -64,30 +76,36 @@ export class Home extends React.Component {
 					prop3Title="Population : "
 					prop4={item.climate}
 					prop4Title="Climate : "
+					prop5={item.diameter}
+					prop5Title="Diameter : "
+					type="planets"
+					id={this.parserFunction(item.url)}
 				/>
 			);
 		});
 
 		return (
-			<div className="home ">
-				<div className="planets-div">
-					<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
-					<p className="pText">Planets</p>
-					<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
-				</div>
-				<div className="container">
-					<div className="row">{newArray2}</div>
-				</div>
-				<div>
-					<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6" />
-					<p className="pText">People</p>
-					<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6" />
-				</div>
+			<React.Fragment>
+				<div className="home ">
+					<div className="planets-div">
+						<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
+						<p className="pText">Planets</p>
+						<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
+					</div>
+					<div className="container">
+						<div className="row">{planetCard}</div>
+					</div>
+					<div>
+						<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6" />
+						<p className="pText">People</p>
+						<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6" />
+					</div>
 
-				<div className="container">
-					<div className="row">{newArray}</div>
+					<div className="container">
+						<div className="row">{peopleCard}</div>
+					</div>
 				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }
