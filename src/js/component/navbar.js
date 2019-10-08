@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Consumer } from "../store/appContext.js";
 
 export class Navbar extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			clicked: false
+		};
+	}
+	show = () => {
+		this.setState({ clicked: !this.state.clicked });
+	};
 	render() {
 		return (
 			<div className="whole">
@@ -33,12 +43,29 @@ export class Navbar extends React.Component {
 							</li>
 						</ul>
 					</div>
-					<form className="form-inline  my-2 my-lg-0">
-						<input className="input form-control mr-sm-2" type="search" placeholder="Search Star Wars" />
-						<button className="search-btn btn btn-outline-light my-2 my-sm-0 " type="submit">
-							<div className="btn-text">Search</div>
+					<div className={"btn-group " + (this.state.clicked && "show")}>
+						<button
+							onClick={this.show}
+							type="button"
+							className="btn btn-secondary dropdown-toggle"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Favorites
 						</button>
-					</form>
+
+						<div className={"dropdown-menu dropdown-menu-right " + (this.state.clicked && "show")}>
+							<Consumer>
+								{({ store, actions }) => {
+									return store.favorites.map((item, index) => (
+										<button key={index} className="dropdown-item" type="button">
+											{item.name}
+										</button>
+									));
+								}}
+							</Consumer>
+						</div>
+					</div>
 				</nav>
 				<ul className="nav-links nav nav-pills nav-fill">
 					<li className="nav-item">
