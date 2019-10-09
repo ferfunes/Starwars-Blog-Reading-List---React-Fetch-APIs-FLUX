@@ -43,11 +43,11 @@ export class Navbar extends React.Component {
 							</li>
 						</ul>
 					</div>
-					<div className={"btn-group " + (this.state.clicked && "show")}>
+					<div className={" btn-group " + (this.state.clicked && "show")}>
 						<button
 							onClick={this.show}
 							type="button"
-							className="btn btn-secondary dropdown-toggle"
+							className="drop-button btn btn-secondary dropdown-toggle"
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
@@ -67,34 +67,27 @@ export class Navbar extends React.Component {
 						</div>
 					</div>
 				</nav>
-				<ul className="nav-links nav nav-pills nav-fill">
+				<ul className="under-menu nav-links nav nav-pills nav-fill">
 					<li className="nav-item">
-						<Link to="/Details">
-							<a className="nav-link " href="#">
-								News + Blog
-							</a>
-						</Link>
+						<a className="nav-link " href="#">
+							News + Blog
+						</a>
+					</li>
+
+					<li className="nav-item">
+						<a className="nav-link " href="#">
+							Details
+						</a>
 					</li>
 					<li className="nav-item">
-						<Link to="/Details">
-							<a className="nav-link " href="#">
-								Details
-							</a>
-						</Link>
+						<a className="nav-link" href="#">
+							Film
+						</a>
 					</li>
 					<li className="nav-item">
-						<Link to="/Details">
-							<a className="nav-link" href="#">
-								Film
-							</a>
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/Details">
-							<a className="nav-link" href="#">
-								Series
-							</a>
-						</Link>
+						<a className="nav-link" href="#">
+							Series
+						</a>
 					</li>
 				</ul>
 			</div>

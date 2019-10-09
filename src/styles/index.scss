@@ -2,7 +2,7 @@ body{
     background: black;
 }
 .hr-top, .hr-bottom{
-    border-top: .05rem solid #1ebba3;
+    border-top: .05rem solid purple;
     width: 1050px;
 }
 
@@ -20,6 +20,8 @@ body{
 /****************************** NavBar Component *********************/
 .navbar{
  background: black;
+ border-bottom: solid 1px purple;
+
 }
 .logo{
     width: 180px;
@@ -50,16 +52,26 @@ color:#1ebba3;
     color: white;
 }
 .whole{
-
     margin-bottom: 100px;
+}
+.drop-button{
+    margin-right: 20px;
 
+}
+.under-menu {
+    border-bottom: solid 1px purple;
+    margin-bottom: 100px;
 }
 /****************************** Card Component *********************/
 .card-planets, .card-characters{
     background: black;
+
 }
 .title{
-    color:white;
+    color:purple;
+}
+.card-body{
+     width: 800px;
 }
 
 

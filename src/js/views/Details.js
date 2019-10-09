@@ -29,9 +29,9 @@ export class Details extends React.Component {
 
 	dynamImg(type) {
 		if (type === "planets") {
-			return "https://lumiere-a.akamaihd.net/v1/images/databank_alderaan_01_169_4a5264e2.jpeg?region=0%2C0%2C1560%2C878&width=768";
+			return "https://lumiere-a.akamaihd.net/v1/images/Death-Star-II_b5760154.jpeg?region=0%2C0%2C2160%2C1215&width=768";
 		} else if (type === "people") {
-			return "https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_5a38c454_461eebf5.jpeg?region=0%2C0%2C1536%2C864&width=768";
+			return "https://lumiere-a.akamaihd.net/v1/images/first-order_8ae2955f.jpeg?region=0%2C0%2C1560%2C878&width=768";
 		}
 	}
 	render() {
