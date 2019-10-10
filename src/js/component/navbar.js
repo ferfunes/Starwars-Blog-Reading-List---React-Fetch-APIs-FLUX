@@ -15,7 +15,7 @@ export class Navbar extends React.Component {
 	render() {
 		return (
 			<div className="whole">
-				<nav className="navbar navbar-expand-lg">
+				<nav className="navbar navbar-expand-lg ">
 					<Link to="/">
 						<img
 							className="logo"

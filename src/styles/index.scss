@@ -22,6 +22,7 @@ body{
  background: black;
  border-bottom: solid 1px purple;
 
+
 }
 .logo{
     width: 180px;
@@ -60,7 +61,7 @@ color:#1ebba3;
 }
 .under-menu {
     border-bottom: solid 1px purple;
-    margin-bottom: 100px;
+
 }
 /****************************** Card Component *********************/
 .card-planets, .card-characters{
@@ -70,9 +71,7 @@ color:#1ebba3;
 .title{
     color:purple;
 }
-.card-body{
-     width: 800px;
-}
+
 
 
 

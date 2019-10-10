@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Consumer } from "../store/appContext.js";
 
 export class Details extends React.Component {
 	constructor() {
@@ -47,6 +48,18 @@ export class Details extends React.Component {
 						<div className=" description-holder col ">
 							<p className="name">{this.state.item.name}</p>
 							<p className="description">{this.dynamType(this.props.match.params.type)}</p>
+							<Consumer>
+								{({ actions }) => {
+									return (
+										<button
+											type="button"
+											className="btn btn-primary btn-sm"
+											onClick={() => actions.addToFavorites(this.state.item)}>
+											Add to Favorites
+										</button>
+									);
+								}}
+							</Consumer>
 						</div>
 					</div>
 					<div className="cont2 row d-flex text-center">
